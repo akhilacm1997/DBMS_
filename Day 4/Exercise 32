@@ -1,0 +1,7 @@
+Write a query to display the sale id, no. of months between the saledate and today's date as "MONTH_AGED"
+for all the sales. Show positive values for no. of months and round it to 1 decimal places.
+
+
+
+
+SELECT SALEID,ROUND(MONTHS_BETWEEN(SYSDATE,SLDATE),1) AS "MONTH_AGED" FROM Sale
