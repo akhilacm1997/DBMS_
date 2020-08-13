@@ -1,0 +1,6 @@
+Display the saleman id and names of salesmen who have not made any sales.
+
+
+
+SELECT S1.SID,S1.SNAME FROM SALESMAN S1 FULL OUTER JOIN SALE S2 ON 
+S1.SID=S2.SID WHERE SLDATE IS NULL
