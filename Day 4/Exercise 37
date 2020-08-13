@@ -1,0 +1,4 @@
+Display product id, description and price of all products in ascending order of description.
+
+
+SELECT PRODID,PDESC,PRICE FROM PRODUCT ORDER BY PDESC 
