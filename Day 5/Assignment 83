@@ -1,0 +1,8 @@
+Retrieve employee name, designation, and email id of those employees
+who work in the same retail outlet where George works. Do not display the record of George in the result.
+
+
+
+SELECT E.EMPNAME,E.DESIGNATION,E.EMAILID FROM EMPDETAILS E
+INNER JOIN EMPDETAILS E1 ON E1.WORKSIN=E.WORKSIN 
+AND E1.EMPNAME='George' AND E.EMPNAME<>'George'
