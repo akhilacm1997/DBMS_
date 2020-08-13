@@ -1,0 +1,5 @@
+The management of EasyShop would like to know the retail outlet ids and the details like description,
+type and retail unit price of items whose retail unit price is more than 1500
+
+
+SELECT R.ROID,I.DESCR,I.ITEMTYPE,R.UNITPRICE FROM ITEM I INNER JOIN RETAILSTOCK R ON R.ITEMCODE=I.ITEMCODE WHERE R.UNITPRICE>1500
