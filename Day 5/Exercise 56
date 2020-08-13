@@ -1,0 +1,12 @@
+Display id, name, manager id and manager name of those employees who are allocated a computer and whose manager is also allocated a computer.
+Also display the model of computer allocated to the employee and the manager.
+
+
+SELECT E.ID ,E.ENAME,M.ID MGRID,M.ENAME MGRNAME,EC.MODEL E_MODEL,MC.MODEL M_MODEL 
+FROM EMPLOYEE E INNER JOIN EMPLOYEE M ON
+M.ID=E.MANAGER INNER JOIN COMPUTER EC ON
+EC.COMPID=E.COMPID INNER JOIN COMPUTER MC ON 
+MC.COMPID=M.COMPID
+
+
+
