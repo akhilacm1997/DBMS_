@@ -1,0 +1,8 @@
+For each item, identify the stock availability in the retail outlet R1001.
+Display itemcode, desc and qtyavailable for the same. 
+If there is no stock available for an item, display 'N.A.' for its quantity on available
+
+
+SELECT I.ITEMCODE,I.DESCR,NVL(TO_CHAR(RS.QTYAVAILABLE), 'N.A.') 
+AS "QTYAVAILABLE" FROM ITEM I LEFT OUTER JOIN RETAILSTOCK RS
+ON  I.ITEMCODE=RS.ITEMCODE  AND RS.ROID='R1001'
