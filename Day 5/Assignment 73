@@ -1,0 +1,6 @@
+The Manager of EasyShop would like to know details of those items for which 
+quotations have been accepted. Display itemcode, item description, category and quotedprice for the same.
+
+
+
+SELECT I.ITEMCODE,I.DESCR,CATEGORY,Q.QUOTEDPRICE FROM ITEM I INNER JOIN QUOTATION Q ON Q.ITEMCODE=I.ITEMCODE WHERE Q.QSTATUS='Accepted'
