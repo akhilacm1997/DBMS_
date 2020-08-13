@@ -1,0 +1,9 @@
+Display retailoutlet location and customer type wise total quantity of items sold where customer's gender is Male and item type is Apparels or Computer.
+
+
+SELECT RO.LOCATION,C.CUSTTYPE,SUM(P.QUANTITY) TOTALQUANTITY 
+FROM RETAILOUTLET RO INNER JOIN PURCHASEBILL P ON P.ROID=RO.ROID
+ INNER JOIN CUSTOMER C ON C.CUSTID=P.CUSTID INNER JOIN ITEM I ON
+ I.ITEMCODE=P.ITEMCODE  
+ WHERE I.ITEMTYPE IN ('Apparels','Computer') 
+ AND GENDER ='M' GROUP BY RO.LOCATION,C.CUSTTYPE
