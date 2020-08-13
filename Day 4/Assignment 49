@@ -1,0 +1,5 @@
+identify the average salary of the jobs 'MANAGER' and 'ANALYST'. Display job, average salary if the identified average salary is more than 1500.
+
+Write your query here
+
+SELECT JOB,AVG(SAL) "Average Salary" FROM EMP WHERE JOB IN('ANALYST','MANAGER') GROUP BY JOB 
