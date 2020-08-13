@@ -1,0 +1,5 @@
+Display the concatenated value of Salesman Name and his location. Use constant string ' is from ' for concatenation (contains single space at beginning and end).
+
+
+
+SELECT CONCAT(SNAME,CONCAT(' is from ',LOCATION)) AS "RESULT" FROM SalesMan
