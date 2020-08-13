@@ -1,0 +1,4 @@
+Display the product id, category and price of those products whose price is same.
+
+
+SELECT P.PRODID,P.CATEGORY,P.PRICE FROM PRODUCT P INNER JOIN PRODUCT P1 ON P.PRICE =P1.PRICE WHERE P1.PRODID<>P.PRODID
