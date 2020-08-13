@@ -1,0 +1,5 @@
+Display the itemcode of those items where the difference of quantity
+on hand and reorder level is more than 50. Convert the result of difference to positive values.
+
+
+SELECT ITEMCODE FROM Item WHERE ABS(ReorderLevel-QtyOnHand)>50
