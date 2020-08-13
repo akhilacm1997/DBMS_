@@ -1,0 +1,6 @@
+EasyShop management wants to know sname and quotationid pertaining to the quotation of those orders, 
+where there is a difference of less than or equal to 5 days between the delivered date and order date. Display unique rows
+
+
+
+SELECT Q.SNAME,Q.QUOTATIONID FROM QUOTATION Q INNER JOIN ORDERS O ON Q.QUOTATIONID= O.QUOTATIONID WHERE DELIVEREDDATE-ORDERDATE<=5
