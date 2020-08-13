@@ -1,0 +1,6 @@
+Display the job, deptno and average salary of employees belonging to department 10 or 20 and their salary is more than 2000 and average salary is more than 2500.
+
+Write your query here
+
+
+SELECT JOB,DEPTNO,AVG(SAL)"AVGSALARY" FROM EMP WHERE SAL >2000  GROUP BY JOB,DEPTNO HAVING DEPTNO IN(10,20) AND (AVG(SAL) > 2500)   
