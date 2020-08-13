@@ -1,0 +1,5 @@
+Retrieve the employee id, employee name of billing staff and the retail outlet where they work. Perform a case insensitive search.
+
+Write your query here
+
+SELECT EMPID,EMPNAME,WORKSIN FROM EMPDETAILS WHERE DESIGNATION ='Billing Staff
