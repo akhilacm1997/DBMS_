@@ -1,0 +1,6 @@
+A discount of 22.5% being offered on all sports category item’s unit price,
+Write a query to display product id, product description, existing unit price as “Old_Price” and
+discounted price as “New_Price” for sports category item. Round off the discounted price to two decimal places.
+
+
+SELECT PRODID,PDESC,PRICE "Old_Price",ROUND(PRICE*0.775,2) "New_Price"FROM Product WHERE CATEGORY ='Sports'
