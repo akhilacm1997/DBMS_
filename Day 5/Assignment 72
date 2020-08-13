@@ -1,0 +1,5 @@
+Display the custid and custname of those customers who are also employees. An employee and customer are considered same if their name and email id match.
+
+
+SELECT CUSTID AS "Customer Id",CUSTNAME AS "Customer Name" FROM CUSTOMER C INNER JOIN EMPDETAILS E ON C.EMAILID=E.EMAILID 
+
