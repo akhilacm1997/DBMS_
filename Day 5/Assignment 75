@@ -1,0 +1,8 @@
+Display itemcode, supplier name and total quantity for the ordered items, whose total quantity ordered is greater than or equal to 100.
+
+
+SELECT Q.ITEMCODE,Q.SNAME,SUM(O.QTYORDERED) TOTALQUANTITY FROM 
+ORDERS O INNER JOIN QUOTATION Q ON 
+Q.QUOTATIONID=O.QUOTATIONID 
+GROUP BY Q.SNAME,Q.ITEMCODE 
+HAVING SUM(O.QTYORDERED)>=100
