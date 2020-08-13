@@ -1,0 +1,8 @@
+Display manager name, category and category wise total quantity of items available in all retail outlet.
+Display manager name as 'No Manager' if no manager is appointed for the retail outlet
+
+
+SELECT NVL(E.EMPNAME,'No Manager') EMPNAME,I.CATEGORY,SUM(RE.QTYAVAILABLE) TOTALQUANTITY
+FROM EMPDETAILS E FULL OUTER JOIN RETAILOUTLET R ON E.EMPID=R.MANAGERID 
+INNER JOIN RETAILSTOCK RE ON R.ROID=RE.ROID 
+INNER JOIN ITEM I ON I.ITEMCODE=RE.ITEMCODE GROUP BY E.EMPNAME,CATEGORY
