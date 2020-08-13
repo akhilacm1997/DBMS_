@@ -1,0 +1,7 @@
+Display the retailoutlet details like roid, location along with the employee details 
+like empid and empname working in it. The details of retailoutlet
+should be displayed even if no employee is working in it.
+
+
+
+SELECT E.EMPID,E.EMPNAME,R.ROID,R.LOCATION FROM EMPDETAILS E RIGHT OUTER JOIN RETAILOUTLET R ON R.ROID=E.WORKSIN
