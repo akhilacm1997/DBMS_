@@ -1,0 +1,6 @@
+The management wants the item code and description of the items whose item price matches with the quotation price for more than one quotation
+
+
+
+SELECT I.ITEMCODE,I.DESCR FROM ITEM I INNER JOIN QUOTATION Q ON
+I.ITEMCODE=Q.ITEMCODE AND Q.QUOTEDPRICE=I.PRICE GROUP BY I.ITEMCODE,I.DESCR HAVING COUNT(*)>1
