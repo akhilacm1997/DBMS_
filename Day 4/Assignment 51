@@ -1,0 +1,15 @@
+Salary hikes are being given to all employees of EasyShop based on their role.
+The percentage increase is as given below. Write a query to display EmpId, EmpName, Salary and increased salary
+
+
+
+SELECT EMPID,EMPNAME,SALARY ,
+CASE DESIGNATION
+WHEN 'Administrator'THEN SALARY*1.10
+WHEN 'Manager' THEN SALARY*1.05
+WHEN 'Billing Staff' THEN SALARY*1.2
+WHEN 'Security' THEN SALARY*1.25
+WHEN 'Others' THEN SALARY*1.02
+END "INCREASEDSALARY"
+
+FROM EMPDETAILS
