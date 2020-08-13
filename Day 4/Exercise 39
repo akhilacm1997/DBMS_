@@ -1,0 +1,3 @@
+Display categories that have more than 1 product.
+
+SELECT CATEGORY FROM PRODUCT GROUP BY CATEGORY HAVING COUNT(CATEGORY)>1
