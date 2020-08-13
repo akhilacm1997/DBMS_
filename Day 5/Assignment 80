@@ -1,0 +1,7 @@
+Display itemcode, descr, billamount and custid for all items of type 'FMCG'. Display billamount and custid as zero if item is not sold.
+
+SELECT I.ITEMCODE,I.DESCR,NVL(P.BILLAMOUNT,0) BILLAMOUNT ,NVL(P.CUSTID,0) CUSTID
+FROM ITEM I LEFT OUTER JOIN PURCHASEBILL P 
+ON P.ITEMCODE=I.ITEMCODE LEFT OUTER JOIN CUSTOMER C
+ON P.CUSTID=C.CUSTID 
+WHERE  I.ITEMTYPE='FMCG'
