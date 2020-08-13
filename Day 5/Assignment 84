@@ -1,0 +1,5 @@
+Display the customer id and customer name of those customers who are co-located. Do not display the duplicate records/rows.
+
+
+
+SELECT S.CUSTID,S.CUSTNAME FROM CUSTOMER S INNER JOIN CUSTOMER S1 ON S.ADDRESS=S1.ADDRESS AND S.CUSTID<>S1.CUSTID
