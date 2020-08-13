@@ -1,0 +1,5 @@
+Display the month and number of quotations received in each month.
+
+
+
+SELECT TO_CHAR(QDate,'Month') MONTH ,count(*)  as QUOTATIONCOUNT FROM Quotation GROUP BY TO_CHAR(QDate,'Month')
