@@ -1,0 +1,5 @@
+Display custname and billamount for those customers who have shopped for more than 5000
+
+
+
+SELECT C.CUSTNAME,P.BILLAMOUNT FROM CUSTOMER C INNER JOIN PURCHASEBILL P ON C.CUSTID=P.CUSTID AND P.BILLAMOUNT>5000
