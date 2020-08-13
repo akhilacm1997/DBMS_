@@ -1,0 +1,6 @@
+For a discount of 25.5% being offered on all FMCG item's unit price, display item code, existing unit price as "Old Price" and discounted price as "New Price". Round off the discounted price to two decimal values.
+
+Write your query here
+
+
+SELECT ITEMCODE,PRICE AS "Old Price",ROUND(price*0.745,2) as "New Price" FROM ITEM WHERE ITEMTYPE='FMCG'
