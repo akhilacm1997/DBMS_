@@ -1,0 +1,8 @@
+Retrieve the order id, order status and payment mode of all the orders. Display 'Payment yet not done' against payment mode column if the payment has not been done.
+
+Write your query here
+SELECT ORDERID,STATUS,CASE
+WHEN PYMTMODE IS NULL THEN 'Payment yet not done'
+WHEN PYMTMODE IS NOT NULL THEN PYMTMODE
+END "PYMTMODE"
+ FROM ORDERS
