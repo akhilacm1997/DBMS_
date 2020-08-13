@@ -1,0 +1,5 @@
+Write a query to display the average price (rounded to 2 decimal places) as Avg, min price as Min, max price as Max and total number of products available as Total.
+
+
+
+SELECT ROUND(AVG(PRICE),2)"Avg",MIN(PRICE)  "Min",MAX(PRICE)"Max",COUNT(PRODID)  "Total" FROM Product
