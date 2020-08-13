@@ -1,0 +1,4 @@
+Retrieve the itemcode and average of quantity available in retail outlets where the average of quantity available is less than 75.
+
+
+select ITEMCODE,AVG(QtyAvailable) AS "Average Quantity" from RetailStock GROUP BY ItemCode HAVING AVG(QtyAvailable)<75
