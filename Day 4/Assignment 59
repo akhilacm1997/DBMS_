@@ -1,0 +1,8 @@
+Retrieve the total number of orders made and the number of orders for which payment has been done.
+
+Write your query here
+
+
+SELECT COUNT(ORDERID) TOTALORDERSCOUNT, 
+COUNT(CASE WHEN STATUS = 'Delivered' THEN 1 ELSE NULL END )PAIDORDERSCOUNT
+FROM ORDERS  
