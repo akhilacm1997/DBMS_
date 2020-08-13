@@ -1,0 +1,4 @@
+Display numeric part of retail outlet id
+
+Write your query here
+SELECT SUBSTR(ROID,2) AS "NUMERICROID" FROM RETAILOUTLET
