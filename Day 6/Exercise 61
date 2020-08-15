@@ -1,0 +1,5 @@
+Display the product id and description of those products which are sold in minimum total quantity.
+
+
+ SELECT PRODID, PDESC FROM PRODUCT WHERE PRODID IN (SELECT PRODID FROM SALEDETAIL GROUP BY PRODID 
+ HAVING SUM(QUANTITY) = (SELECT MIN(SUM(QUANTITY)) FROM SALEDETAIL GROUP BY PRODID))
